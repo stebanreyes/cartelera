@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cartelera.nombre %>
+</p>
+
+<p>
+  <strong>Raiting:</strong>
+  <%= @cartelera.raiting %>
+</p>
+
+<%= link_to 'Edit', edit_cartelera_path(@cartelera) %> |
+<%= link_to 'Back', carteleras_path %>

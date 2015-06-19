@@ -1,0 +1,25 @@
+<%= form_for(@cartelera) do |f| %>
+  <% if @cartelera.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cartelera.errors.count, "error") %> prohibited this cartelera from being saved:</h2>
+
+      <ul>
+      <% @cartelera.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :raiting %><br>
+    <%= f.text_field :raiting %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
